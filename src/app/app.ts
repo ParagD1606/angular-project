@@ -6,7 +6,7 @@ import { Todos } from "./components/todos/todos";
   selector: 'app-root',
   imports: [Todos],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styles: [],
 })
 export class App {
   title = 'todo -list'

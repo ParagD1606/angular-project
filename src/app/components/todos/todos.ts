@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../../Todo';
-import { title } from 'process';
 import { NgFor } from "@angular/common";
 import { TodoItem } from "../todo-item/todo-item";
 
@@ -8,7 +7,7 @@ import { TodoItem } from "../todo-item/todo-item";
   selector: 'app-todos',
   imports: [NgFor, TodoItem],
   templateUrl: './todos.html',
-  styleUrl: './todos.css',
+  styles: [],
 })
 export class Todos implements OnInit{
   todos:Todo[] = [];
@@ -36,5 +35,8 @@ export class Todos implements OnInit{
   }
   ngOnInit(): void {
     
+  }
+  deleteTodo(todo: Todo){
+    console.log(todo)
   }
 }
