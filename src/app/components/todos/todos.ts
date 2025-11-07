@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../../Todo';
 import { title } from 'process';
-import { NgForOf } from "../../../../node_modules/@angular/common/common_module.d";
+import { NgFor } from "@angular/common";
+import { TodoItem } from "../todo-item/todo-item";
 
 @Component({
   selector: 'app-todos',
-  imports: [NgForOf],
+  imports: [NgFor, TodoItem],
   templateUrl: './todos.html',
   styleUrl: './todos.css',
 })
