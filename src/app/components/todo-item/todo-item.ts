@@ -1,10 +1,11 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Todo } from '../../Todo';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-todo-item',
   standalone: true,
-  imports: [],
+  imports: [NgIf],
   templateUrl: './todo-item.html',
   styleUrl: './todo-item.css',
 })
@@ -13,7 +14,7 @@ export class TodoItem implements OnInit{
   @Output() todoDelete: EventEmitter<Todo> = new EventEmitter();
   constructor(){}
   ngOnInit(): void {}
-  onClick(todo: Todo){
+  onDelete(todo: Todo){
     this.todoDelete.emit(todo);
   }
 }

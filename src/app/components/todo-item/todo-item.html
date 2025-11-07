@@ -1,5 +1,7 @@
-<div>
-<h3>{{todo.title}}</h3>
-<p>{{todo.desc}}</p>
-<button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+<div [class.strike]="!todo.active">
+    <h4>{{todo.title}}</h4>
+    <p>{{todo.desc}}</p>
+    <span *ngIf="!todo.active" class="badge bg-success">Done</span>
+    
+    <button class="btn btn-danger" (click)="onDelete(todo)">Delete</button>
 </div>
